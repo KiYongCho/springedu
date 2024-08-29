@@ -1,4 +1,4 @@
-package springmvc1.controller;
+package springmvc1.controller; 
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
