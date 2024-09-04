@@ -1,4 +1,4 @@
-<h3>See branches!</h3><br /><br />
+<h3>See branches!</h3><br />
 branche                description<br />
 ------------------------------------------------------------<br />
 springdi_anno          스프링DI (annotation)<br />
