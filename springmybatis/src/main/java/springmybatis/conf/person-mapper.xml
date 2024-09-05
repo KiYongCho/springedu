@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Person">
+
+<select id="getPersonList" resultType="Person">
+	select * from person
+	order by pid desc
+</select>
+
+<select id="getPerson" parameterType="int" resultType="Person">
+	select * from person
+	where pid=#{pid}
+</select>
+ 
+<insert id="insertPerson" parameterType="Person">
+	insert into person 
+	values(seq_person.nextval, #{pname}, #{page})
+</insert>
+
+<update id="updatePerson" parameterType="Person">
+	update person 
+	set pname=#{pname}, page =#{page}
+	where pid=#{pid}
+</update>
+
+<delete id="deletePerson" parameterType="int">
+	delete person 
+	where pid=#{pid}
+</delete>
+
+</mapper>
+
+
+
+
+
+
+
+
