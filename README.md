@@ -10,5 +10,5 @@ branche                description<br />
 7. springmvc5             스프링MVC Rest통신<br />
 8. springaop              스프링AOP<br />
 9. springjdbc             스프링JDBC<br />
-10. springmybatis          스프링MyBatis<br />
-
+10. springmybatis         스프링MyBatis<br />
+11. springjpa             스프링JPA<br /> 
