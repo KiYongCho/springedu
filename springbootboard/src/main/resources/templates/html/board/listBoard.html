@@ -1,0 +1,54 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>글 목록</title>
+<link rel="stylesheet" th:href="@{/css/board.css}" />
+</head>
+<body>
+<div class="wrapper">
+	<div class="title">
+		<h1>게시글 목록</h1>
+		<h3><span th:text="${session['member'].name.concat('님 환영!!!')}" /></h3>
+		<a th:href="@{/member/logout}">로그아웃</a>
+	</div>
+	<div class="content">
+		<table class="listBoard">
+			<colgroup>
+				<col width="50">
+				<col width="400">
+				<col width="100">
+				<col width="100">
+				<col width="50">
+			</colgroup>
+			<tr>
+				<th>번호</th>
+				<th>제목</th>
+				<th>작성자</th>
+				<th>등록일</th>
+				<th>조회수</th>
+			</tr>
+				<tr th:each="board, state : ${boardList}">
+					<td th:text="${state.count}" />
+					<td class="alignLeft">
+						<a th:href="@{/board/getBoard(action='getBoard', seq=${board.seq})}"
+							th:text="${board.title}"></a>
+					</td>
+					<td th:text="${board.writer}" />
+					<td th:text="${#dates.format(board.createDate,'yyyy-MM-dd')}" />
+					<td th:text="${board.cnt}" />
+				</tr>
+		</table>
+	</div>
+	<div>
+		<a th:href="@{/board/insertBoard}">새글 등록</a>
+	</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<div class="wrapper">
+	<div class="title">
+		<h1>BoardException 발생!</h1>
+	</div>
+	<div class="content">			
+		<p>
+			<a th:href="@{/}">메인화면으로</a>
+		</p>
+		<p>
+			예외메세지 : <span th:text="${exception.message}" />
+		</p>
+		<ul th:each="trace : ${exception.stackTrace}">
+			<li th:text="${trace}" />
+		</ul>
+	</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
