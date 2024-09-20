@@ -13,4 +13,4 @@ branche                description<br />
 10. springmybatis         스프링MyBatis<br />
 11. springjpa             스프링JPA<br /> 
 12. springbootbasic       스프링부트기본<br />
-13. springbootboard       스프링부트게시판(회원, JPA)<br/>
+13. springbootboard       스프링부트게시판(회원, 예외처리, JPA)<br/>
